@@ -2,10 +2,69 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3fc7096c55.js"
+      crossorigin="anonymous"
+    ></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Js form validation</title>
   </head>
   <script src="script.js"></script>
-  <body></body>
+  <body>
+    <div class="container">
+      <form>
+        <i class="fas fa-paper-plane"></i>
+        <div class="input-group">
+          <!-- <label>Name</label> -->
+          <input
+            type="text"
+            placeholder="name"
+            id="name"
+            onkeyup="validateName()"
+          />
+          <span id="name-error"></span>
+        </div>
+
+        <!-- <div class="input-group">
+            <label>Phone Number</label>
+            <input type="text" placeholder="Family Name" />
+            </div> -->
+
+        <div class="input-group">
+          <!-- <label>Phone Number</label> -->
+          <input
+            type="tel"
+            placeholder="Phone number"
+            id="phone-number"
+            onkeyup="validatePhoneNumber()"
+          />
+          <span id="tel-error"></span>
+        </div>
+        <div class="input-group">
+          <!-- <label >Mail</label> -->
+          <input
+            type="email"
+            placeholder="e-mail"
+            onkeyup="validateEmail()"
+            id="email"
+          />
+          <span id="email-error"></span>
+        </div>
+        <div class="input-group">
+          <!-- <label>Message</label> -->
+          <textarea
+            onkeyup="validateMessage()"
+            id="message"
+            placeholder="Your message"
+            rows="5"
+          ></textarea>
+          <span id="message-error"></span>
+        </div>
+        <button onclick="return validateForm()">Submit</button>
+        <span id="submit-error"></span>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
